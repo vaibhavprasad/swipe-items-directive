@@ -1,0 +1,30 @@
+/* Styles go here */
+
+.box{
+  border: 1px solid;
+}
+.panel-height{
+  height:10em;
+}
+.width-side-pane{
+  width: 45%;
+}
+.width-control-pane{
+  width:10%;
+}
+.align-center{
+  text-align:center;
+  margin: 0px;
+  padding: 0px;
+}
+.button-prop{
+  margin-bottom: 2px;
+  width: 7em;
+}
+.scr {
+  overflow: scroll;
+  height: 30em;
+}
+tr:hover td {
+  background-color: orange;
+} 

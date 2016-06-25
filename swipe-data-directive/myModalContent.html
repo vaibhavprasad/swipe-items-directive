@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h3 class="modal-title">{{title}}</h3>
+</div>
+<div class="modal-body scr">
+  <div class = "row">
+    <div class = "col-md-5">
+      <table border="1px solid" class = "table table-striped table-hover table-bordered">
+        <tr>
+          <th>Unselected Items</th>
+        </tr>
+        <tr ng-repeat="item in initialList track by $index"><td ng-click="addToSelected($index)" ng-if="! item.selected">{{item.name}}</td></tr>
+      </table>
+    </div>
+    <div class = "col-md-2 align-center">
+      <button class="btn button-prop btn-primary" ng-click = "selectAll()">Select All</button><br/>
+      <button class="btn button-prop btn-danger" ng-click = "removeAll()">Remove All</button>
+    </div>
+    <div class = "col-md-5">
+      <table border="1px solid" class = "table table-striped table-hover table-bordered">
+        <tr>
+          <th>Selected Items</th>
+        </tr>
+        <tr ng-repeat="item in initialList track by $index"><td ng-click="addToUnselected($index)" ng-if="item.selected">{{item.name}}</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+  <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>
